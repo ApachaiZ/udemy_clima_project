@@ -20,7 +20,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.always ||
         permission == LocationPermission.whileInUse) {
-      printLocation();
+      returnLocation();
     }
     if (permission == LocationPermission.denied) {
       requestPermission();
@@ -37,13 +37,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
     LocationPermission permission = await Geolocator.requestPermission();
     if (permission == LocationPermission.always ||
         permission == LocationPermission.whileInUse) {
-      printLocation();
+      returnLocation();
     } else {
       requestPermission();
     }
   }
 
-  void printLocation() async {
+  void returnLocation() async {
     Position position = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high,
       timeLimit: const Duration(seconds: 10),
