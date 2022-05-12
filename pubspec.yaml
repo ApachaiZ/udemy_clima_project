@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.4
   geolocator: ^8.2.1
+  http: ^0.13.4
+  convert: ^3.0.1
 
 dev_dependencies:
   flutter_test:

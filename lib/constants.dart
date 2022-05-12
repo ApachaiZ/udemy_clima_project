@@ -1,0 +1,1 @@
+String openWeatherMapApiKey = '6b3fccba832dd108fe488c3bfb518e4f';
